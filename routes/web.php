@@ -20,6 +20,11 @@ Route::get('/', function () {
 Route::get('/ItemInsert',function(){
     return view('itemAdd');
 });
+
+Route::get('/Saledashboard',function(){
+    return view('salesdashboard');
+});
+
 Route::get('/newpage',function(){
     return view('new');
 });
