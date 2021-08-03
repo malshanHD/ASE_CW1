@@ -56,6 +56,7 @@
                 <li class="list-group-item">Womens Items</li>
                 <li class="list-group-item">Baby Items</li>
                 <li class="list-group-item">Girl's Fashion</li>
+                <li class="list-group-item">Boy's Fashion</li>
             </ul>
         </div>
         <div class="col-6 align-self-end">
