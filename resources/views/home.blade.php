@@ -59,7 +59,7 @@
             </ul>
         </div>
         <div class="col-6 align-self-end">
-            <img src="SystemImage/adver.JPEG" style="width:100%;" alt="">
+            <img src="SystemImage/advers.JPEG" style="width:100%;" alt="">
         </div>
         <div class="col-3 align-self-end">
             <img src="SystemImage/syslogo.png" style="width:100%;" alt="">
