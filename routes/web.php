@@ -28,3 +28,6 @@ Route::get('/Saledashboard',function(){
 Route::get('/newpage',function(){
     return view('new');
 });
+Route::get('/BuyItem',function(){
+    return view('buyitem');
+});
