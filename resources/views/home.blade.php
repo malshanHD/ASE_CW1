@@ -119,7 +119,11 @@
     <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
               <div class="card-body">
-                   <img src="AddItemsImages/g1.PNG" style="width: 100%;" height="auto" alt="">             
+                   <img src="AddItemsImages/g1.PNG" style="width: 100%;" height="auto" alt="">  
+                   <p><b>Item name</b></p> 
+                    <span>
+                      <p><s>$15</s> &nbsp &nbsp $10</p> 
+                    </span>        
               </div>
             </div>
           </div>  
@@ -138,7 +142,11 @@
           <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
               <div class="card-body">
-                   <img src="AddItemsImages/m1.PNG" style="width: 100%;" height="auto" alt="">             
+                   <img src="AddItemsImages/m1.PNG" style="width: 100%;" height="auto" alt="">    
+                   <p><b>Item name</b></p>
+                   <span>
+                      <p><s>$20</s> &nbsp &nbsp $18</p>
+                   </span>         
               </div>
             </div>
           </div>  
@@ -156,7 +164,11 @@
     <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
               <div class="card-body">
-                   <img src="AddItemsImages/j1.PNG" style="width: 100%;" height="auto" alt="">             
+                   <img src="AddItemsImages/j1.PNG" style="width: 100%;" height="auto" alt="">  
+                   <p><b>Item name</b></p> 
+                   <span>
+                     <p><s>$40</s> &nbsp &nbsp $38</p>
+                   </span>          
               </div>
             </div>
           </div>  
@@ -174,7 +186,11 @@
     <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
               <div class="card-body">
-                   <img src="AddItemsImages/bby1.PNG" style="width: 100%;" height="auto" alt="">             
+                   <img src="AddItemsImages/bby1.PNG" style="width: 100%;" height="auto" alt="">   
+                   <p><b>Item name</b></p>
+                   <span>
+                     <p><s>$30</s> &nbsp &nbsp 27</p>
+                   </span>          
               </div>
             </div>
           </div>  
@@ -192,7 +208,11 @@
     <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
               <div class="card-body">
-                   <img src="AddItemsImages/f1.JPG" style="width: 100%;" height="auto" alt="">             
+                   <img src="AddItemsImages/f1.JPG" style="width: 100%;" height="auto" alt="">  
+                   <p><b>Item name</b></p>
+                   <span>
+                     <p><s>$51</s> &nbsp &nbsp $45</p>
+                   </span>           
               </div>
             </div>
           </div>  
@@ -209,7 +229,11 @@
     <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
               <div class="card-body">
-                   <img src="AddItemsImages/eleI1.JPG" style="width: 100%;" height="auto" alt="">             
+                   <img src="AddItemsImages/eleI1.JPG" style="width: 100%;" height="auto" alt="">   
+                   <p><b>Item name</b></p>
+                   <span>
+                     <p><s>$27</s> &nbsp &nbsp $22</p>
+                   </span>          
               </div>
             </div>
           </div>  
@@ -226,7 +250,11 @@
     <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
               <div class="card-body">
-                   <img src="AddItemsImages/b1.JPG" style="width: 100%;" height="auto" alt="">             
+                   <img src="AddItemsImages/b1.JPG" style="width: 100%;" height="auto" alt=""> 
+                   <p><b>Item name</b></p>
+                   <span>
+                     <p><s>$35</s> &nbsp &nbsp $30</p>
+                   </span>            
               </div>
             </div>
           </div>  
@@ -243,7 +271,11 @@
       <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
                <div class="card-body">
-                    <img src="AddItemsImages/eleI1.JPG" style="width: 100%;" height="auto" alt="">             
+                    <img src="AddItemsImages/eleI1.JPG" style="width: 100%;" height="auto" alt=""> 
+                    <p><b>Item name</b></p>
+                   <span>
+                     <p><s>$66</s> &nbsp &nbsp $55</p>
+                   </span>            
                 </div>
               </div>
             </div>  
