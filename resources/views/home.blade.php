@@ -98,9 +98,135 @@
           </div>
 
     </div>
-
   </div>
+       
 </div>
+
+<div class="container">
+    <div class="row">
+          <div class="col-3">
+            <h4 class="text-uppercase">Women's Fashion</h4>
+          </div>
+    </div>
+    <div class="row">
+    <div class="col-3">
+            <div class="card" style="width: 100%;">
+              <div class="card-body">
+                   <img src="AddItemsImages/g1.PNG" style="width: 100%;" height="auto" alt="">             
+              </div>
+            </div>
+          </div>  
+    </div>
+
+    <div class="row">
+          <div class="col-3">
+            <h4 class="text-uppercase">Men's Fashion</h4>
+          </div>
+    </div>
+    <div class="row">
+    <div class="col-3">
+            <div class="card" style="width: 100%;">
+              <div class="card-body">
+                   <img src="AddItemsImages/m1.PNG" style="width: 100%;" height="auto" alt="">             
+              </div>
+            </div>
+          </div>  
+    </div>
+
+    <div class="row">
+          <div class="col-3">
+            <h4 class="text-uppercase">Jewellery Items</h4>
+          </div>
+    </div>
+    <div class="row">
+    <div class="col-3">
+            <div class="card" style="width: 100%;">
+              <div class="card-body">
+                   <img src="AddItemsImages/j1.PNG" style="width: 100%;" height="auto" alt="">             
+              </div>
+            </div>
+          </div>  
+    </div>
+
+    <div class="row">
+          <div class="col-3">
+            <h4 class="text-uppercase">Baby Items</h4>
+          </div>
+    </div>
+    <div class="row">
+    <div class="col-3">
+            <div class="card" style="width: 100%;">
+              <div class="card-body">
+                   <img src="AddItemsImages/bby1.PNG" style="width: 100%;" height="auto" alt="">             
+              </div>
+            </div>
+          </div>  
+    </div>
+
+    <div class="row">
+          <div class="col-3">
+            <h4 class="text-uppercase">Furnitures</h4>
+          </div>
+    </div>
+    <div class="row">
+    <div class="col-3">
+            <div class="card" style="width: 100%;">
+              <div class="card-body">
+                   <img src="AddItemsImages/f1.JPG" style="width: 100%;" height="auto" alt="">             
+              </div>
+            </div>
+          </div>  
+    </div>
+
+    <div class="row">
+          <div class="col-3">
+            <h4 class="text-uppercase">Electric Items</h4>
+          </div>
+    </div>
+    <div class="row">
+    <div class="col-3">
+            <div class="card" style="width: 100%;">
+              <div class="card-body">
+                   <img src="AddItemsImages/eleI1.JPG" style="width: 100%;" height="auto" alt="">             
+              </div>
+            </div>
+          </div>  
+    </div>
+
+    <div class="row">
+          <div class="col-3">
+            <h4 class="text-uppercase">Books</h4>
+          </div>
+    </div>
+    <div class="row">
+    <div class="col-3">
+            <div class="card" style="width: 100%;">
+              <div class="card-body">
+                   <img src="AddItemsImages/b1.JPG" style="width: 100%;" height="auto" alt="">             
+              </div>
+            </div>
+          </div>  
+    </div>
+
+    <div class="row">
+          <div class="col-3">
+            <h4 class="text-uppercase">Electronic Items</h4>
+          </div>
+    </div>
+    <div class="row">
+    <div class="col-3">
+            <div class="card" style="width: 100%;">
+              <div class="card-body">
+                   <img src="AddItemsImages/eleI1.JPG" style="width: 100%;" height="auto" alt="">             
+              </div>
+            </div>
+          </div>  
+    </div
+
+</div>
+
+
+
 
 
 
