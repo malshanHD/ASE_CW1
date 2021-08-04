@@ -25,8 +25,8 @@ Route::get('/Saledashboard',function(){
     return view('salesdashboard');
 });
 
-Route::get('/newpage',function(){
-    return view('new');
+Route::get('/SignUp',function(){
+    return view('SignUp');
 });
 Route::get('/BuyItem',function(){
     return view('buyitem');
