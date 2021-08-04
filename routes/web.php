@@ -31,3 +31,6 @@ Route::get('/newpage',function(){
 Route::get('/BuyItem',function(){
     return view('buyitem');
 });
+Route::get('/SignIn',function(){
+    return view('signin');
+});
