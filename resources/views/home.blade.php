@@ -253,6 +253,60 @@
 
 
 
+<div class="container-fluid">
+  <div class="row Justify-content-center" style="background: linear-gradient(90deg, rgba(233,255,4,1) 0%, rgba(1,21,81,1) 0%, rgba(1,21,81,1) 30%, rgba(1,21,81,1) 61%, rgba(1,21,81,1) 100%);">
+      <div class="col-12 col-md-12 mt-2">
+          <h5 class="font-weight-bold text-light text-center"> Stay Connected</h5>
+     </div>
+     <div class="col-1 mt-2">
+        <h5 class="font-weight-bold text-light"><i class="fa fa-twitter-square" aria-hidden="true"></i></h5>
+     </div>
+     <div class="col-1 mt-2">
+        <h5 class="font-weight-bold text-light"><i class="fa fa-facebook-official" aria-hidden="true"></i></h5>
+     </div>
+     <div class="col-1 mt-2">
+        <h5 class="font-weight-bold text-light"><i class="fa fa-instagram" aria-hidden="true"></i></h5>
+     </div>
+     <div class="col-1 mt-2">
+        <h5 class="font-weight-bold text-light"><i class="fa fa-envelope" aria-hidden="true"></i></h5>
+     </div>
+    </div>    
+    </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row Justify-content-center" style="background: linear-gradient(90deg, rgba(233,255,4,1) 0%, rgba(1,21,81,1) 0%, rgba(1,21,81,1) 30%, rgba(1,21,81,1) 61%, rgba(1,21,81,1) 100%);">
+    <div class="col-2 mt-2">
+        <h5 class="font-weight-bold text-light text-center"> HELP</h5>
+    </div>
+    <div class="col-2 mt-2">
+    <h5 class="font-weight-bold text-light text-center"> CATEGORIES</h5>
+    </div>
+    <div class="col-2 mt-2">
+    <h5 class="font-weight-bold text-light text-center"> CUSTOMER SERVICE</h5>
+    </div>
+    <div class="col-2 mt-2">
+    <h5 class="font-weight-bold text-light text-center"> SHOPPING WITH US</h5>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row Justify-content-center" style="background: linear-gradient(90deg, rgba(233,255,4,1) 0%, rgba(1,21,81,1) 0%, rgba(1,21,81,1) 30%, rgba(1,21,81,1) 61%, rgba(1,21,81,1) 100%);">
+    <div class="col-12 col-md-12 mt-5">
+          <h5 class="font-weight-bold text-light text-center"> Sams & Sams Pvt LTD </h5>
+     </div>
+  </div>
+</div>
+
+  <div class="container-fluid">
+    <div class="row Justify-content-center" style="background: linear-gradient(90deg, rgba(233,255,4,1) 0%, rgba(1,21,81,1) 0%, rgba(1,21,81,1) 30%, rgba(1,21,81,1) 61%, rgba(1,21,81,1) 100%);">
+      <div class="col-12 col-md-12 mt-2">
+            <h5 class="font-weight-bold text-light text-center"> All Right Reserved 2021 </h5>
+      </div>
+    </div>
+  </div>
+
 
 
 
