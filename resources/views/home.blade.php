@@ -59,9 +59,50 @@
   <div class="row">
     <div class="col-3">
     <h4 class="text-uppercase">Categories</h4>
+      <div class="">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Women's Fashion</a></li>
+          <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Men's Fashion</a></li>
+          <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Jewellery Items</a></li>
+          <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Baby Items</a></li>
+          <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Furnitures</a></li>
+          <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Electrics Items</a></li>
+          <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Books</a></li>
+          <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Electronic Items</a></li>
+        </ul>
+      </div>
     </div>
+
+    <div class="col-6">
+      
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="SliderImage/add.JPG" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="SliderImage/add1.JPG" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="SliderImage/add2.JPG" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+    </div>
+
   </div>
 </div>
+
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
