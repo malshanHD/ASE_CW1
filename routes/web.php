@@ -16,9 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/ItemInsert',function(){
-    return view('itemAdd');
-});
 
 Route::get('/Saledashboard',function(){
     return view('salesdashboard');
@@ -52,6 +49,11 @@ Route::get('/returnItem',function(){
 Route::get('/CategoryAdd',function(){
     $categoryType=App\maincategory::all();
     return view('CategoryAdd')->with('cat',$categoryType);
+});
+
+Route::get('/ItemInsert',function(){
+    $categoryType=App\maincategory::all();
+    return view('itemAdd')->with('cat',$categoryType);
 });
 
 Route::post('/categorySave','maincatcontroller@savedata');

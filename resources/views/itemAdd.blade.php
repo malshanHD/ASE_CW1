@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="row mt-3 font-weight-bold">
-        <div class="col-6">
+        <div class="col-4">
             <div class="form-group">
                 <label for="itemCode">Item Code</label> <span class="text-danger">*</span>
                 <input type="text" class="form-control border border-primary" id="itemCode"  placeholder="Item Code" name="code">
@@ -40,7 +40,9 @@
                 <label for="category">Main Category</label> <span class="text-danger">*</span>
                 <select id="category" class="form-control border border-primary">
                     <option selected>Choose...</option>
-                    <option>...</option>
+                    @foreach($cat as $cat)
+                    <option value="{{$cat->id}}">{{$cat->categoryName}}</option>
+                    @endforeach
                 </select>
         </div>
         <div class="form-group col-md-6">
