@@ -34,3 +34,6 @@ Route::get('/BuyItem',function(){
 Route::get('/SignIn',function(){
     return view('signin');
 });
+Route::get('/CategoryAdd',function(){
+    return view('categoryadd');
+});
