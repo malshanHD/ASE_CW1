@@ -40,4 +40,10 @@ Route::get('/CategoryAdd',function(){
 Route::get('/MyOrders',function(){
     return view('myorders');
 });
+<<<<<<< HEAD
 
+=======
+Route::get('/ChangeAdvertiestment',function(){
+    return view('AdminAddChange');
+});
+>>>>>>> 99ae09af32354987b2faaf0eed27d9c492591627

@@ -10,7 +10,8 @@
 </head>
 <body>
 <!-- start navbar start-->
-@include('include.sellerNavbar')
+@include('include.adminNavBar')
+
 <!-- nav-bar end-->
 
 <div class="container mt-5">
