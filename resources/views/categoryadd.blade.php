@@ -65,7 +65,7 @@
       </div>
     </div>
 </div>
-
+@include('include.footer')
 
 
 
