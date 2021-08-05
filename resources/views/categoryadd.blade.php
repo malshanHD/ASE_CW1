@@ -24,6 +24,7 @@
   <div class="row mt-3 justify-content-center">
       <div class="col-5 mr-2" style="background: rgb(222,222,222);">
         <form action="/categorySave" method="post">
+        {{csrf_field()}}
               <div class="form-group mt-5 ml-2 mr-2">
                 <label for="categorytype">Category Type</label> <span class="text-danger">*</span>
                 <input type="text" class="form-control border border-warning" id="categorytype"  placeholder="Add category Type" name="categorytype">

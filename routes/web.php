@@ -45,3 +45,4 @@ Route::get('/ChangeAdvertiestment',function(){
     return view('AdminAddChange');
 });
 
+Route::post('/categorySave','maincatcontroller@savedata');
