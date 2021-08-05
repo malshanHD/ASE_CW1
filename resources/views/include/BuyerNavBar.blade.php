@@ -5,6 +5,9 @@
   </button>
   <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="navbarNavDropdown">
     <ul class="navbar-nav">
+    <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
       <li class="nav-item active">
         <a class="nav-link" href="#">Language</a>
       </li>
