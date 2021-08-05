@@ -18,19 +18,19 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-5 ">
+            <div class="col-12 col-md-5 ">
             <div class="form-group mt-5 ml-2 md-3 ">
                 <label for="ordernum">Order number</label> <span class="text-danger"></span>
                 <input type="text" class="form-control border border-warning" id="ordernum"  placeholder="Order number" name="ordernumber"> 
             </div>
             </div>
-            <div class="col-5 ">
+            <div class="col-12 col-md-5 ">
             <div class="form-group mt-5 ml-2 md-3 ">
                 <label for="item">Item</label> <span class="text-danger"></span>
                 <input type="text" class="form-control border border-warning" id="item"  placeholder="Item" name="item">
             </div>
             </div>
-            <div class="col-2 mt-4">
+            <div class="col-12 col-md-2 mt-4">
             <div class="form-group mt-5 ml-2 md-3 ">
             <input type="submit" class="mb-5 mt-4 btn btn-warning btn-block  btn-outline-primary " value="search">
             </div>
@@ -38,35 +38,43 @@
         </div>
     </div>
 </div>
-<table class="table table-bordered">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+    <div class="table-responsive">
+    <table class="table table-bordered fixed">
   <thead>
     <tr>
-      <th scope="col">Product</th>
-      <th scope="col">Product Action</th>
+      <th scope="col">Order ID</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Seller Name</th>
+      <th scope="col">Order Time</th>
       <th scope="col">Order Status</th>
-      <th scope="col">Order Action</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col" style="width: 50px;">Item</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Order ID:145865254</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td >145865254</td>
+      <td>Men's Jersy</td>
+      <td>ABC company</td>
+      <td>2021-07-25 8.30am</td>
+      <td>Delivered</td>
+      <td>$15.45</td>
+      <td>1x</td>
+      <td><img src="itemimage/jersy.png"style="width:100%;" alt=""></td>
+      <td><a href="#">Return</a></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    
   </tbody>
 </table>
+    </div>
+    </div>
+  </div>
+</div>
 <!--page footer-->
 @include('include.footer')
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
