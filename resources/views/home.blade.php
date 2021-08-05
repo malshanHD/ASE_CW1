@@ -282,7 +282,7 @@
       </div>
 </div>
     
-
+@include('include.footer')
 
 
 
