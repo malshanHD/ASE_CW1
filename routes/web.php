@@ -40,3 +40,4 @@ Route::get('/CategoryAdd',function(){
 Route::get('/MyOrders',function(){
     return view('myorders');
 });
+
