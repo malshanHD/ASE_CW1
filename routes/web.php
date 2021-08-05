@@ -46,7 +46,7 @@ Route::get('/ChangeAdvertiestment',function(){
 });
 
 Route::get('/returnItem',function(){
-    return view('ItemRetun');
+    return view('ItemReturn');
 });
 
 Route::get('/CategoryAdd',function(){
