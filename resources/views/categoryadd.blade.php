@@ -34,16 +34,25 @@
       </div>
 
       <div class="col-5 ml-2" style="background: rgb(222,222,222);">
-            <div class="form-group mt-5 ml-2 mr-2">
-            <label for="category">Main Category</label> <span class="text-danger">*</span>
-                <select id="category" class="form-control border border-warning">
+      <form action="/subcategorySave" method="post">      
+      <div class="form-group mt-5 ml-2 mr-2">
+             {{csrf_field()}}
+              <label for="category">Main Category</label> <span class="text-danger">*</span>
+                
+                <select id="category" class="form-control border border-warning" name="maincategory">
                     <option selected>Choose...</option>
-                    <option>...</option>
+                    @foreach($cat as $cat)
+                    <option value="{{$cat->id}}">{{$cat->categoryName}}</option>
+                    @endforeach
                 </select>
-                <label for="subcategorytype" class="mt-2">Sub Category Type</label> <span class="text-danger">*</span>
-                <input type="text" class="form-control border border-warning" id="subcategorytype"  placeholder="Add sub category Type" name="subcategorytype">
+
+                <label for="sbcategorytype" class="mt-2">Sub Category Type</label> <span class="text-danger">*</span>
+                <input type="text" class="form-control border border-warning" id="sbcategorytype"  placeholder="Add sub category Type" name="subcategorytype">
+
+              
             </div>
-            <input type="submit" class="mb-5 mt-4 btn btn-warning btn-block  btn-outline-primary" name="subcategoryinsert" value="ADD">
+            <input type="submit" class="mb-5 mt-4 btn btn-warning btn-block btn-outline-primary" name="subcategoryinsert" value="ADD">
+            </form>
       </div>
     </div>
 </div>
