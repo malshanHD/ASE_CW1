@@ -15,130 +15,151 @@
 <!-- nav end-->
 
 <!-- Sign-up form start-->
-<div class="container"> 
+<div class="container mt-3"> 
     <div class="col-md-3"></div>
     <div class="col-md-12" id="form">
       <form>
            <h1>Welcome to Sams & Sams!</h1>
                <br><br>
+
+                  <div class="row">
+                           <div class="col-md-4">
+                              <label>Frist Name:</label>
+                              <input type="text" placeholder="Frist Name" class="form-control border border-primary"  required="">
+                           </div>
+
+                           <div class="col-md-4">
+                              <label>Last Name:</label>
+                              <input type="text" placeholder="Last Name" class="form-control border-primary" required="">
+                           </div>
+                  </div>
+               
+
+                  <div class="row">
+                           <div class="col-md-4">
+                              <label>Email:</label>
+                              <input type="text" placeholder="Email" class="form-control border-primary" required="">
+                           </div>
+                  </div>
+                  
+
                 <div class="row">
-                   <div class="col-md-12"></div>
-                      <div class="col-md-6">
-                      <label>Frist Name:</label>
-                          <input type="text" placeholder="Frist Name" class="form-control border border-primary"  required="">
-                        </div>
-                      <div class="col-md-6">
-                     <label>Last Name:</label>
-                           <input type="text" placeholder="Last Name" class="form-control border-primary" required="">
-                        </div>
-                    <div class="col-md-4">
-                       <label>Email:</label>
-                           <input type="text" placeholder="Email" class="form-control border-primary" required="">
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                   <div class="col-md-12"></div>
-                       <div class="col-md-3">
-                      <label>Date of Birth:</label>
-                          <input type="date" placeholder="" class="form-control border-primary" required="">
-                        </div>
                         <div class="col-md-3">
-                     <label>Gender:</label>
-                     <div class="Gender">
-                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   Gender
-                  </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Male</a>
-                    <a class="dropdown-item" href="#">Female</a>
-                       </div>
-                     </div>
+                           <label>Gender:</label>                       
+                           <div class="Gender">
+                              <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Gender </button>
+                    
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                 <a class="dropdown-item" href="#">Male</a>
+                                 <a class="dropdown-item" href="#">Female</a>
+                              </div>
+                           </div>
        
-                        </div>
-                        <div class="col-md-3">
-                     <label>Country Code:</label>
-                     <div class="Country Code">
-                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Country Code
-                  </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">+94</a>
-                    <a class="dropdown-item" href="#">+92</a>
-                       </div>
-                     </div>
                         </div>  
+
                         <div class="col-md-3">
-                     <label>Phone Namber :</label>
-                           <input type="text" placeholder="Phone Namber " class="form-control border-primary" required="">
-                    </div>  
-                </div>  
-                <br>
+                           <label>Date of Birth:</label>
+                           <input type="date" placeholder="" class="form-control border-primary" required="">
+                        </div>
+               </div>   
+
+                 <div class="row">
+                        <div class="col-md-3">
+                              <label>Country Code:</label>
+                              <div class="Country Code">
+                                 <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Country Code </button>
+                     
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">+94</a>
+                                    <a class="dropdown-item" href="#">+92</a>
+                                 </div>
+                              </div>
+                        </div>  
+
+
+                        <div class="col-md-3">
+                           <label>Phone Number :</label>
+                              <input type="text" placeholder="Phone Namber " class="form-control border-primary" required="">
+                        </div>
+                 </div>
+                
+
                 <div class="row">
-                   <div class="col-md-12"></div>
-                   <div class="col-md-3">
-                     <label>Country:</label>
-                     <div class="Country">
-                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Country 
-                  </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Sri Lanka</a>
-                    <a class="dropdown-item" href="#">USA</a>
-                    <a class="dropdown-item" href="#">UK</a>
-                       </div>
-                     </div>
-                         </div>
                         <div class="col-md-3">
-                     <label>Street Address 1:</label>
+                           <label>Street Address 1:</label>
                            <input type="text" placeholder="Street Address 1" class="form-control border-primary" required="">
                         </div>
-                    <div class="col-md-3">
-                       <label>Street Address 2:</label>
-                           <input type="text" placeholder="Street Address 2" class="form-control border-primary" required="">
-                       </div>  
-                    <div class="col-md-3">
-                      <label>Province :</label>
-                          <input type="text" placeholder="Province " class="form-control border-primary" required="">
+
+                        <div class="col-md-3">
+                              <label>Street Address 2:</label>
+                              <input type="text" placeholder="Street Address 2" class="form-control border-primary" required="">
                         </div>
-                   </div>  
-                <br>
-                <div class="row">
-                   <div class="col-md-12"></div> 
-                      <div class="col-md-4">
-                     <label>City:</label>
+
+                        <div class="col-md-3">
+                           <label>Province :</label>
+                           <input type="text" placeholder="Province " class="form-control border-primary" required="">
+                        </div>
+
+                        <div class="col-md-3">
+                           <label>Country:</label>
+                              <div class="Country">
+                              <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Country </button>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                 <a class="dropdown-item" href="#">SriLanka</a>
+                                 <a class="dropdown-item" href="#">USA</a>
+                                 <a class="dropdown-item" href="#">UK</a>
+                                 </div>
+                              </div>
+                        </div>
+                  </div>  
+               
+
+                <div class="row"> 
+                        <div class="col-md-4">
+                           <label>City:</label>
                            <input type="text" placeholder="City" class="form-control border-primary" required="">
-                         </div>
-                       <div class="col-md-4">
-                     <label>Zip Code:</label>
+                        </div>
+
+                        <div class="col-md-4">
+                           <label>Zip Code:</label>
                            <input type="text" placeholder="Zip Code" class="form-control border-primary" required="">
-                         </div>  
-                       <div class="col-md-4">
-                     <label>User Name:</label>
-                          <input type="text" placeholder="User Name" class="form-control border-primary" required="">
-                        </div>   
-                    </div>   
-                <br>
+                        </div>    
+                </div>   
+                
+                     
                 <div class="row">
-                   <div class="col-md-12"></div>
-                     <div class="col-md-6">
-                     <label>Create Password:</label>
+                        <div class="col-md-4">
+                           <label>User Name:</label>
+                           <input type="text" placeholder="User Name" class="form-control border-primary" required="">
+                        </div> 
+               </div> 
+
+               <div class="row">
+                        <div class="col-md-4">
+                           <label>Create Password:</label>
                            <input type="Password" placeholder="Create Password" class="form-control border-primary" required="">
                         </div>
-                        <div class="col-md-6">
-                     <label>Confirm Password:</label>
+               </div>
+               
+               <div class="row">
+                        <div class="col-md-4">
+                           <label>Confirm Password:</label>
                            <input type="Password" placeholder="Confirm Password" class="form-control border-primary" required="">
-                    </div>  
-                </div> 
-            </div> 
+                        </div> 
+               </div>
+                         
+            
              <br>
-            <div class="container">
-               <div class="row justify-content-center ">
+             
+            <div class="row justify-content-Start ">
+               <div class="col-12 col-md-4">
                  <button type="button" class="btn btn-warning">Create Account</button>
+               </div> 
             </div> 
+
       </form>
-       </div>
-    <div class="col-md-3"></div>
+      </div>
+   </div>
 </div>
   <!-- Sign-up form end-->
 
