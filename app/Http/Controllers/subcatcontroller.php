@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\subcategory;
+use DB;
 
 class subcatcontroller extends Controller
 {
@@ -14,4 +15,17 @@ class subcatcontroller extends Controller
         $Subcategory->id=$request->maincategory;
         $Subcategory->save();
     }
+
+    public function getCountries()
+    {
+        $categoryType = DB::table('maincategories')->pluck("categoryName","id");
+        return view('itemAdd',compact('categoryType'));
+    }
+
+    public function getStates($id) 
+    {        
+            $states = DB::table("subcategories")->where("id",$id)->pluck("subcategoryName","subcat_id");
+            return json_encode($states);
+    }
+
 }

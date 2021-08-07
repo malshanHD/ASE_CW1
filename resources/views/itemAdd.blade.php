@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Item Add</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
 </head>
 <body>
 <!-- start navbar start-->
@@ -38,16 +41,16 @@
         </div>
         <div class="form-group col-md-6">
                 <label for="category">Main Category</label> <span class="text-danger">*</span>
-                <select id="category" class="form-control border border-primary">
-                    <option selected>Choose...</option>
-                    @foreach($cat as $cat)
-                    <option value="{{$cat->id}}">{{$cat->categoryName}}</option>
+                <select id="category" class="form-control border border-primary maincategory" onchange="icode()" name="category">
+                    <option value="">--- Select Category ---</option>
+                    @foreach ($categoryType as $key => $value)
+                    <option value="{{ $key }}">{{ $value }}</option>
                     @endforeach
                 </select>
         </div>
         <div class="form-group col-md-6">
                 <label for="Subcategory">Sub Category</label> <span class="text-danger">*</span>
-                <select id="Subcategory" class="form-control border border-primary">
+                <select id="Subcategory" class="form-control border border-primary subcate" id="subcate" name="subcate" >
                     <option selected>Choose...</option>
                     <option>...</option>
                 </select>
@@ -99,10 +102,48 @@
     </div>
 </div>
 
+
+
 @include('include.footer')
 
+<script type="text/javascript">
+    jQuery(document).ready(function ()
+    {
+            jQuery('select[name="category"]').on('change',function(){
+               var catID = jQuery(this).val();
+               if(catID)
+               {
+                  jQuery.ajax({
+                     url : 'dropdownlist/getstates/' +catID,
+                     type : "GET",
+                     dataType : "json",
+                     success:function(data)
+                     {
+                        console.log(data);
+                        jQuery('select[name="subcate"]').empty();
+                        jQuery.each(data, function(key,value){
+                           $('select[name="subcate"]').append('<option value="'+ key +'">'+ value +'</option>');
+                        });
+                     }
+                  });
+               }
+               else
+               {
+                  $('select[name="subcate"]').empty();
+               }
+            });
+    });
+    </script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>
+        function icode(){
+            var d=document.getElementById("category");
+            var displayItemCode=d.options[d.selectedIndex].text;
+            document.getElementById("itemCode").value=displayItemCode;
+        }
+    </script>
+
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
 </html>

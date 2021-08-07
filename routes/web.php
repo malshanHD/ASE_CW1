@@ -51,11 +51,15 @@ Route::get('/CategoryAdd',function(){
     return view('CategoryAdd')->with('cat',$categoryType);
 });
 
-Route::get('/ItemInsert',function(){
-    $categoryType=App\maincategory::all();
-    return view('itemAdd')->with('cat',$categoryType);
-});
+
+
+Route::get('ItemInsert','subcatcontroller@getCountries');
+Route::get('dropdownlist/getstates/{id}','subcatcontroller@getStates');
+
+
+Route::get('/findSubCat','subcatcontroller@subcatfind');
 
 Route::post('/categorySave','maincatcontroller@savedata');
 Route::post('/subcategorySave','subcatcontroller@subsavedata');
+
 
