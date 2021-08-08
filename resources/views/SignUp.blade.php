@@ -8,6 +8,39 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+    <style>
+       blockquote {
+               border-left: 4px solid;
+               margin: 10px 0 25px;
+               padding: 10px 10px 10px 20px;
+               color: #555;
+               }
+
+.container {
+  padding: 10px 30px;
+}
+
+.country-container {
+  display: flex;
+}
+
+.flag {
+  background-size: 50px 30px;
+  height: 30px;
+  width: 50px;
+  display: inline-block;
+  margin: 0 10px 0 0;
+  flex: 0 0 50px;
+}
+
+.countries {
+  width: 90%;
+  max-width: 400px;
+}
+
+
+    </style>
+
 </head>
 <body>
  <!-- nav start-->
@@ -20,112 +53,102 @@
     <div class="col-md-12" id="form">
       <form>
            <h1>Welcome to Sams & Sams!</h1>
-               <br><br>
 
                   <div class="row">
-                           <div class="col-md-4">
+                           <div class="col-md-4 mt-5">
                               <label>Frist Name:</label>
                               <input type="text" placeholder="Frist Name" class="form-control border border-primary"  required="">
                            </div>
 
-                           <div class="col-md-4">
+                           <div class="col-md-4 mt-5">
                               <label>Last Name:</label>
                               <input type="text" placeholder="Last Name" class="form-control border-primary" required="">
-                           </div>
-                  </div>
-               
-
-                  <div class="row">
-                           <div class="col-md-4">
-                              <label>Email:</label>
-                              <input type="text" placeholder="Email" class="form-control border-primary" required="">
                            </div>
                   </div>
                   
 
                 <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3 mt-4">
                            <label>Gender:</label>                       
-                           <div class="Gender">
-                              <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Gender </button>
-                    
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                 <a class="dropdown-item" href="#">Male</a>
-                                 <a class="dropdown-item" href="#">Female</a>
-                              </div>
-                           </div>
+                           <select class="form-control border-primary" name="gender" id="gender">
+                              <option value="" selected>Choose</option>
+                              <option value="Male">Male</option>
+                              <option value="Female">Female</option>
+                           </select>
+                          
        
                         </div>  
 
-                        <div class="col-md-3">
+                        <div class="col-md-5 mt-4">
                            <label>Date of Birth:</label>
                            <input type="date" placeholder="" class="form-control border-primary" required="">
                         </div>
                </div>   
+               <hr class="mt-4">
+                 <div class="row">
+                           <div class="col-md-6">
+                              <label>Email:</label>
+                              <input type="email" placeholder="Email" class="form-control border-primary" required="">
+                           </div>
+
+                        <div class="col-md-4">
+                           <label>Phone Number :</label>
+                              <input type="text" placeholder="Phone Number " class="form-control border-primary" required="">
+                        </div>
+                 </div>
 
                  <div class="row">
-                        <div class="col-md-3">
-                              <label>Country Code:</label>
-                              <div class="Country Code">
-                                 <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Country Code </button>
-                     
-                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">+94</a>
-                                    <a class="dropdown-item" href="#">+92</a>
-                                 </div>
-                              </div>
-                        </div>  
-
-
-                        <div class="col-md-3">
-                           <label>Phone Number :</label>
-                              <input type="text" placeholder="Phone Namber " class="form-control border-primary" required="">
+                        <div class="col-md-4 mt-3">
+                           <label>Country :</label>
+                              <select class="countries form-control border-primary" name="countries" id="countries">
+                                 <option value="" id="countries"></option>
+                              </select>
+                        </div>
+                        <div class="col-md-1 mt-4">
+                           <label></label>
+                              <span class="flag" id="flag"></span> 
                         </div>
                  </div>
                 
 
                 <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-5 mt-3">
                            <label>Street Address 1:</label>
                            <input type="text" placeholder="Street Address 1" class="form-control border-primary" required="">
                         </div>
 
-                        <div class="col-md-3">
+                        <div class="col-md-5 mt-3">
                               <label>Street Address 2:</label>
                               <input type="text" placeholder="Street Address 2" class="form-control border-primary" required="">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label>Province :</label>
-                           <input type="text" placeholder="Province " class="form-control border-primary" required="">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label>Country:</label>
-                              <div class="Country">
-                              <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Country </button>
-                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                 <a class="dropdown-item" href="#">SriLanka</a>
-                                 <a class="dropdown-item" href="#">USA</a>
-                                 <a class="dropdown-item" href="#">UK</a>
-                                 </div>
-                              </div>
                         </div>
                   </div>  
                
 
                 <div class="row"> 
-                        <div class="col-md-4">
+                        <div class="col-md-4 mt-4">
                            <label>City:</label>
                            <input type="text" placeholder="City" class="form-control border-primary" required="">
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 mt-4">
+                           <label>Province :</label>
+                           @include('include.province')
+                        </div>
+
+                        <div class="col-md-4 mt-4">
                            <label>Zip Code:</label>
                            <input type="text" placeholder="Zip Code" class="form-control border-primary" required="">
                         </div>    
                 </div>   
-                
+                <hr class="mt-4">
+
+                  <div class="row">
+                     <div class="col-md-6">
+                        <input type="file" name="picture" id="picture" class="form-control border-primary">
+                     </div>
+                  </div>
+
+                <hr class="mt-4">
                      
                 <div class="row">
                         <div class="col-md-4">
@@ -135,14 +158,12 @@
                </div> 
 
                <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 mt-4">
                            <label>Create Password:</label>
                            <input type="Password" placeholder="Create Password" class="form-control border-primary" required="">
                         </div>
-               </div>
-               
-               <div class="row">
-                        <div class="col-md-4">
+
+                        <div class="col-md-4 mt-4">
                            <label>Confirm Password:</label>
                            <input type="Password" placeholder="Confirm Password" class="form-control border-primary" required="">
                         </div> 
@@ -152,7 +173,7 @@
              <br>
              
             <div class="row justify-content-Start ">
-               <div class="col-12 col-md-4">
+               <div class="col-12 col-md-4 mt-4">
                  <button type="button" class="btn btn-warning">Create Account</button>
                </div> 
             </div> 
@@ -169,5 +190,47 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+    <script>
+          const xhttp = new XMLHttpRequest();
+          const select = document.getElementById("countries");
+          const flag = document.getElementById("flag");
+
+            let countries;
+
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                countries = JSON.parse(xhttp.responseText);
+                assignValues();
+                handleCountryChange();
+              }
+            };
+            xhttp.open("GET", "https://restcountries.eu/rest/v2/all", true);
+            xhttp.send();
+
+            function assignValues() {
+              countries.forEach(country => {
+                const option = document.createElement("option");
+                option.value = country.alpha2Code;
+                option.textContent = country.name;
+                select.appendChild(option);
+              });
+            }
+
+            function handleCountryChange() {
+              const countryData = countries.find(
+                country => select.value === country.alpha2Code
+              );
+              flag.style.backgroundImage = `url(${countryData.flag})`;
+            }
+
+            select.addEventListener("change", handleCountryChange.bind(this));
+
+      </script>
+
+
+
+
 </body>
 </html>
