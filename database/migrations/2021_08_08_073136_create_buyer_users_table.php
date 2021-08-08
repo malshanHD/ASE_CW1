@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBuyersTable extends Migration
+class CreateBuyerUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateBuyersTable extends Migration
      */
     public function up()
     {
-        Schema::create('buyers', function (Blueprint $table) {
-            $table->id();
+        Schema::create('buyer_users', function (Blueprint $table) {
+            $table->string('email')->primary();
             $table->string('firstname');
             $table->string('lastname');
             $table->string('gender');
             $table->date('dob');
-            $table->string('email');
             $table->integer('phnNumber');
             $table->string('country');
             $table->string('streetadd01');
@@ -27,12 +26,9 @@ class CreateBuyersTable extends Migration
             $table->string('city');
             $table->string('province');
             $table->integer('zipcode');
-            $table->string('image');
+            $table->string('profilePicture');
             $table->string('username');
             $table->string('password');
-            $table->string('confirmpassword');
-
-
             $table->timestamps();
         });
     }
@@ -44,6 +40,6 @@ class CreateBuyersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('buyers');
+        Schema::dropIfExists('buyer_users');
     }
 }
