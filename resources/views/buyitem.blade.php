@@ -33,23 +33,39 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-4 mt-2">
+    @foreach($datas as $data)
+        <div class="col-6 mt-2">
             <div class="card" style="width:100%;">
                 <div class="card-body">
-                    <img src="itemimage/jersy.png" style="width:100%" alt="">
-            
+                    <img src="{{asset('AddItemsImages/'.$data->mainImage)}}" style="width:100%" alt="">
                 </div>
             </div>
         </div>
         <div class="col-6">
-            <h4>Men's High Quality Cotton Jersy</h4>
-            <p>US $15.25 </p>
+            <h4>{{$data->itemName}}</h4>
+            <p>US {{$data->itemDiscount}} </p>
             <p>Ratings </p>
             <p>Quantity </p>
             <p>Seller Name </p>
             <button type="submit" class="btn btn-primary "> Buy Now</button>
             <button type="submit" class="btn btn-secondary ">Add to cart</button>
         </div>
+    @endforeach
+    </div>
+    <div class="row">
+        <div class="col-6">
+
+        <div class="row">
+        
+        @foreach($images as $img)
+            <div class="col-3">
+                <img src="{{ url('storage/avatars/'.basename($img->image)) }}" class="img-fluid" alt="Avatar">
+            </div>
+        @endforeach
+        </div>
+
+        </div>
+    
     </div>
 </div>
 @include('include.footer')
@@ -58,3 +74,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+

@@ -14,6 +14,10 @@ class itemcontroller extends Controller
 
         $item = new item();
 
+        $imgName=time().'-'.$request->name.'.'.$request->mainPic->extension();
+
+        $request->mainPic->move(public_path('AddItemsImages'),$imgName);
+
         $item = $item->create([
             'itemCode' => $request->code,
             'itemName' => $request->name,
@@ -24,6 +28,7 @@ class itemcontroller extends Controller
             'itemDiscount' => $request->Discount,
             'itemMainCat' => $request->category,
             'itemSubCat' => $request->subcate,
+            'mainImage' => $imgName,
         ]);
 
 
@@ -38,13 +43,21 @@ class itemcontroller extends Controller
                 $itemImage = new ItemImage();
 
                 $itemImage->create([
-                    'item_id' => $item->id,
+                    'item_id' => $item->itemCode,
                     'image' => $filename
                 ]);
             }
         }
         
 
-        dd($path);
+        return redirect()->back()->with('message', 'Item Added Successfully!');
+    }
+    public function itemView($itemCode){
+        $itemRetrive=$itemCode;
+        $datas=item::where('itemCode',$itemRetrive)->get();
+
+        $images=ItemImage::where('item_id',$itemRetrive)->get();
+
+        return view('buyitem', compact('images', 'datas'));
     }
 }

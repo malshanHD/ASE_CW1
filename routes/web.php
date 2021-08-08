@@ -13,8 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('home');
+});*/
+
+Route::get('/', function () {
+   $item=App\item::all();
+    return view('home')->with('item',$item);
+    
 });
 
 Route::get('/Saledashboard',function(){
@@ -25,8 +31,12 @@ Route::get('/SignUp',function(){
     return view('SignUp');
 });
 Route::get('/BuyItem',function(){
+    
     return view('buyitem');
 });
+
+route::get('/BuyItem/{itemCode}','itemcontroller@itemView');
+
 Route::get('/SignIn',function(){
     return view('signin');
 });

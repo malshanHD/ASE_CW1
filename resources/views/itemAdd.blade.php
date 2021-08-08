@@ -20,6 +20,12 @@
             <h1 class="text-uppercase">Item Add</h1>
         </div>
     </div>
+    @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session()->get('message') }}
+        </div>
+    @endif
+    
     <form action="/itemUpload" method="post" enctype="multipart/form-data">
     {{csrf_field()}}
     <div class="row mt-3 font-weight-bold">
@@ -84,7 +90,13 @@
         </div>
         <div class="col-8">
             <div class="form-group mt-2">
-                <label for="itemPic">Pictures</label> <span class="text-danger">*</span>
+                <label for="mainPic">Main Picture</label> <span class="text-danger">*</span>
+                <input type="file" class="form-control border border-primary"  id="mainPic" name="mainPic">
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="form-group mt-2">
+                <label for="itemPic">Side Pictures</label> <span class="text-danger">*</span>
                 <input type="file" class="form-control border border-primary"  id="itemPic" name="pictures[]" multiple="true">
             </div>
         </div>

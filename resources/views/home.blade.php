@@ -112,17 +112,19 @@
     </div>
 
     <div class="row">
+    @foreach($item as $data)
           <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
               <div class="card-body">
-                   <img src="AddItemsImages/m1.PNG" style="width: 100%;" height="auto" alt="">    
-                   <p><b>Item name</b></p>
+                <img class="card-img-top" src="{{asset('AddItemsImages/'.$data->mainImage)}}" style="width:100%; height:100%;" alt="Card image cap"> 
+                   <p><b><a href="/BuyItem/{{$data->itemCode}}">{{$data->itemName}}</a></b></p>
                    <span>
-                      <p><s>$20</s> &nbsp &nbsp $18</p>
+                      <p><s>${{$data->itemPrice}}</s> &nbsp &nbsp ${{$data->itemDiscount}}</p>
                    </span>         
               </div>
             </div>
-          </div>  
+          </div> 
+      @endforeach 
     </div>
 </div>
 
