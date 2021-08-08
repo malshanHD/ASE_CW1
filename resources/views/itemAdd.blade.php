@@ -20,6 +20,8 @@
             <h1 class="text-uppercase">Item Add</h1>
         </div>
     </div>
+    <form action="/itemUpload" method="post" enctype="multipart/form-data">
+    {{csrf_field()}}
     <div class="row mt-3 font-weight-bold">
         <div class="col-4">
             <div class="form-group">
@@ -36,18 +38,19 @@
         <div class="col-12">
             <div class="form-group mt-2">
                 <label for="itemDes">Item Description</label> <span class="text-danger">*</span>
-                <input type="text" class="form-control border border-primary" id="itemDes"  placeholder="Item Description" name="Item Description">
+                <input type="text" class="form-control border border-primary" id="itemDes"  placeholder="Item Description" name="description">
             </div>
         </div>
         <div class="form-group col-md-6">
                 <label for="category">Main Category</label> <span class="text-danger">*</span>
-                <select id="category" class="form-control border border-primary maincategory" onchange="icode()" name="category">
+                <select id="category" class="form-control border border-primary maincategory"  name="category">
                     <option value="">--- Select Category ---</option>
                     @foreach ($categoryType as $key => $value)
                     <option value="{{ $key }}">{{ $value }}</option>
                     @endforeach
                 </select>
         </div>
+        <input type="hidden" name="rowCOunt" value="{{$count2}}" id="rowCOunt">
         <div class="form-group col-md-6">
                 <label for="Subcategory">Sub Category</label> <span class="text-danger">*</span>
                 <select id="Subcategory" class="form-control border border-primary subcate" id="subcate" name="subcate" >
@@ -58,7 +61,7 @@
         <div class="col-4">
             <div class="form-group mt-2">
                 <label for="itemWarranty">Warranty</label> <span class="text-danger">*</span>
-                <input type="text" class="form-control border border-primary" id="itemWarranty"  placeholder="Item Warranty" name="Warranty">
+                <input type="text" class="form-control border border-primary" id="itemWarranty"  placeholder="Item Warranty" name="Warranty" onchange="icode()">
             </div>
          </div>
          <div class="col-4">
@@ -82,7 +85,7 @@
         <div class="col-8">
             <div class="form-group mt-2">
                 <label for="itemPic">Pictures</label> <span class="text-danger">*</span>
-                <input type="file" class="form-control border border-primary"  id="itemPic" name="pictures">
+                <input type="file" class="form-control border border-primary"  id="itemPic" name="pictures[]" multiple="true">
             </div>
         </div>
     </div>
@@ -100,6 +103,7 @@
             <input type="submit" class="btn btn-warning btn-block" value="Clear">
         </div>
     </div>
+    </form>
 </div>
 
 
@@ -119,9 +123,11 @@
                      dataType : "json",
                      success:function(data)
                      {
-                        console.log(data);
+                        // console.log(data);
                         jQuery('select[name="subcate"]').empty();
                         jQuery.each(data, function(key,value){
+                            console.log(key);
+                            console.log(value);
                            $('select[name="subcate"]').append('<option value="'+ key +'">'+ value +'</option>');
                         });
                      }
@@ -137,9 +143,13 @@
 
     <script>
         function icode(){
-            var d=document.getElementById("category");
-            var displayItemCode=d.options[d.selectedIndex].text;
-            document.getElementById("itemCode").value=displayItemCode;
+            
+            concateText = document.getElementById("category").value + document.getElementById("rowCOunt").value;
+
+            document.getElementById("itemCode").value = concateText;
+            
+           
+        
         }
     </script>
 

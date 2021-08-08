@@ -19,12 +19,14 @@ class subcatcontroller extends Controller
     public function getCountries()
     {
         $categoryType = DB::table('maincategories')->pluck("categoryName","id");
-        return view('itemAdd',compact('categoryType'));
+        $count2 = DB::table('items')->count();
+        return view('itemAdd',compact('categoryType','count2'));
     }
 
     public function getStates($id) 
     {        
             $states = DB::table("subcategories")->where("id",$id)->pluck("subcategoryName","subcat_id");
+            // dd(json_encode($states));
             return json_encode($states);
     }
 
