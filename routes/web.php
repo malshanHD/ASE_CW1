@@ -23,7 +23,10 @@ Route::get('/', function () {
 
     $maincategory=App\maincategory::all();
 
-    return view('home', compact('item', 'maincategory'));
+    $WomensFashion=App\item::where('categoryName',"Women's Fashion");
+    
+
+    return view('home', compact('item', 'maincategory','WomensFashion'));
     
 });
 

@@ -17,13 +17,13 @@ class itemcontroller extends Controller
         $this->validate($request,[
             'name'=>'required|max:180|min:2',
             'description'=>'required|max:180|min:2',
-            'category'=>'required|max:180|min:2',
-            'subcate'=>'required|max:180|min:2',
-            'Warranty'=>'required|max:180|min:2',
-            'Quantity'=>'required|max:180|min:2',
-            'Price'=>'required|max:180|min:2',
-            'mainPic'=>'required|mimes:jpg,png,jpeg|max:10096',
-            'pictures[]'=>'required|mimes:jpg,png,jpeg|max:10096',
+            'category'=>'required',
+            'subcate'=>'required',
+            'Warranty'=>'required',
+            'Quantity'=>'required',
+            'Price'=>'required',
+            'mainPic'=>'required|mimes:jpg,png,jpeg,JPG,PNG,JPEG|max:10096',
+            
             
         ]);
 

@@ -24,12 +24,16 @@
             {{csrf_field()}}
       <div class="container mt-3">
         <div class="row justify-content-center"        >
+        <div class="col-md-4">
+            <img src="itemimage/gif.gif" style="width: 40%;" height="auto" alt="">
+            </div>
             <div class="col-md-8">        
                 <div class="input-group">        
                     <input type="search" class="form-control rounded input-lg" name="Search" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                     <button type="submit" class="btn btn-warning"><i class="fa fa-search"></i></button>
                 </div>        
-            </div>         
+            </div> 
+                    
         </div>        
       </div>      
 </form>
@@ -46,7 +50,6 @@
           <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Jewellery Items</a></li>
           <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Baby Items</a></li>
           <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Furnitures</a></li>
-          <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Electrics Items</a></li>
           <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Books</a></li>
           <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Electronic Items</a></li>
         </ul>
@@ -91,17 +94,19 @@
           </div>
     </div>
     <div class="row">
-    <div class="col-12 col-md-3 mb-2">
+    @foreach($WomensFashion as $womencat)
+          <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
               <div class="card-body">
-                   <img src="AddItemsImages/g1.PNG" style="width: 100%;" height="auto" alt="">  
-                   <p><b>Item name</b></p> 
-                    <span>
-                      <p><s>$15</s> &nbsp &nbsp $10</p> 
-                    </span>        
+                <img class="card-img-top" src="{{asset('AddItemsImages/'.$womencat->mainImage)}}" style="width:100%; height:100%;" alt="Card image cap"> 
+                   <p><b><a href="/BuyItem/{{$womencat->itemCode}}">{{$womencat->itemName}}</a></b></p>
+                   <span>
+                      <p>${{$womencat->itemPrice}}</p>
+                   </span>         
               </div>
             </div>
-          </div>  
+          </div> 
+      @endforeach 
     </div>
 </div>
 
