@@ -13,5 +13,6 @@ class maincatcontroller extends Controller
 
         $category->categoryName=$request->categorytype;
         $category->save();
+        return redirect()->back()->with('message', 'Item Added Successfully!');
     }
 }

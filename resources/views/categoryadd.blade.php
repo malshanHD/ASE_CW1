@@ -20,7 +20,11 @@
       <h3>Add Category types to Sams & Sams! </h3>
     </div>
   </div>
-
+  @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session()->get('message') }}
+        </div>
+    @endif
   <div class="row mt-3 justify-content-center">
       <div class="col-5 mr-2" style="background: rgb(222,222,222);">
         <form action="/categorySave" method="post">

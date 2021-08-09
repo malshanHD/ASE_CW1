@@ -66,28 +66,23 @@
         </div>
         <div class="col-4">
             <div class="form-group mt-2">
-                <label for="itemWarranty">Warranty</label> <span class="text-danger">*</span>
+                <label for="itemWarranty">Warranty (Monthly)</label> <span class="text-danger">*</span>
                 <input type="text" class="form-control border border-primary" id="itemWarranty"  placeholder="Item Warranty" name="Warranty" onchange="icode()">
             </div>
          </div>
          <div class="col-4">
             <div class="form-group mt-2">
                 <label for="itemQuantity">Quantity</label> <span class="text-danger">*</span>
-                <input type="text" class="form-control border border-primary" id="itemQuantity"  placeholder="Item Quantity" name="Quantity">
+                <input type="number" class="form-control border border-primary" id="itemQuantity"  placeholder="Item Quantity" name="Quantity">
             </div>
          </div>
          <div class="col-4">
             <div class="form-group mt-2">
-                <label for="itemPrice">Item Price</label> <span class="text-danger">*</span>
+                <label for="itemPrice">Starting BID</label> <span class="text-danger">*</span>
                 <input type="text" class="form-control border border-primary" id="itemPrice"  placeholder="Item Price" name="Price" required>
             </div>
          </div>
-         <div class="col-4">
-            <div class="form-group mt-2">
-                <label for="itemDiscount">Discount</label> <span class="text-danger">*</span>
-                <input type="text" class="form-control border border-primary" id="itemDiscount"  placeholder="Item Discount" name="Discount">
-            </div>
-        </div>
+        
         <div class="col-8">
             <div class="form-group mt-2">
                 <label for="mainPic">Main Picture</label> <span class="text-danger">*</span>

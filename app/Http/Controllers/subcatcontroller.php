@@ -14,6 +14,7 @@ class subcatcontroller extends Controller
         $Subcategory->subcategoryName=$request->subcategorytype;
         $Subcategory->id=$request->maincategory;
         $Subcategory->save();
+        return redirect()->back()->with('message', 'Item Added Successfully!');
     }
 
     public function getCountries()

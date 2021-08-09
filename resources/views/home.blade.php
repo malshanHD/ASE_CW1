@@ -36,11 +36,12 @@
 
 <div class="container-fluid mt-4 ">
   <div class="row">
-    <div class="col-12 col-md-3 align-self-end">
-    <h4 class="text-uppercase"><i class="fa fa-bars" aria-hidden="true"></i> Categories</h4>
+  <div class="col-md-0 col-lg-0 col-xl-1 bg-warning"></div>
+  <div class="col-12 col-md-3 col-lg-3 col-xl-2">
+    
       <div class="" >
         <ul class="list-group list-group-flush">
-          <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Women's Fashion</a></li>
+          <li class="list-group-item font-weight-bold"><a class="text-dark" href="#" >Women's Fashion</a></li>
           <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Men's Fashion</a></li>
           <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Jewellery Items</a></li>
           <li class="list-group-item font-weight-bold"><a class="text-dark" href="#">Baby Items</a></li>
@@ -52,7 +53,8 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-9 align-self-end">
+  
+    <div class="col-12 col-md-9 col-lg-9 col-xl-9  align-self-end">
       
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -119,7 +121,7 @@
                 <img class="card-img-top" src="{{asset('AddItemsImages/'.$data->mainImage)}}" style="width:100%; height:100%;" alt="Card image cap"> 
                    <p><b><a href="/BuyItem/{{$data->itemCode}}">{{$data->itemName}}</a></b></p>
                    <span>
-                      <p><s>${{$data->itemPrice}}</s> &nbsp &nbsp ${{$data->itemDiscount}}</p>
+                      <p>${{$data->itemPrice}}</p>
                    </span>         
               </div>
             </div>

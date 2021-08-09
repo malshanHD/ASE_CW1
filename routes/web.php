@@ -19,7 +19,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
    $item=App\item::all();
-    return view('home')->with('item',$item);
+    //return view('home')->with('item',$item);
+
+    $maincategory=App\maincategory::all();
+
+    return view('home', compact('item', 'maincategory'));
     
 });
 

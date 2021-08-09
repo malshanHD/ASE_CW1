@@ -43,7 +43,7 @@
         </div>
         <div class="col-6">
             <h4>{{$data->itemName}}</h4>
-            <p>US {{$data->itemDiscount}} </p>
+            <p>BID Starting Price : ${{$data->itemPrice}} </p>
             <p>Ratings </p>
             <p>Quantity </p>
             <p>Seller Name </p>
