@@ -51,49 +51,26 @@
 <div class="container mt-3"> 
     <div class="col-md-3"></div>
     <div class="col-md-12" id="form">
-      <form>
+      <form method="post" action="/sellerInfoSave" enctype="multipart/form-data">
+      {{csrf_field()}}
            <h1>Welcome to Sams & Sams!</h1>
 
                   <div class="row">
-                           <div class="col-md-4 mt-5">
-                              <label>Frist Name:</label>
-                              <input type="text" placeholder="Frist Name" class="form-control border border-primary"  required="">
-                           </div>
-
-                           <div class="col-md-4 mt-5">
-                              <label>Last Name:</label>
-                              <input type="text" placeholder="Last Name" class="form-control border-primary" required="">
-                           </div>
+                     <div class="col-md-6 mt-5">
+                        <label> Company name:</label>
+                        <input type="text" name="companyname" placeholder="Company name" class="form-control border-primary">
+                     </div>
                   </div>
-                  
 
-                <div class="row">
-                        <div class="col-md-3 mt-4">
-                           <label>Gender:</label>                       
-                           <select class="form-control border-primary" name="gender" id="gender">
-                              <option value="" selected>Choose</option>
-                              <option value="Male">Male</option>
-                              <option value="Female">Female</option>
-                           </select>
-                          
-       
-                        </div>  
-
-                        <div class="col-md-5 mt-4">
-                           <label>Date of Birth:</label>
-                           <input type="date" placeholder="" class="form-control border-primary" required="">
-                        </div>
-               </div>   
-               <hr class="mt-4">
                  <div class="row">
-                           <div class="col-md-6">
-                              <label>Email:</label>
-                              <input type="email" placeholder="Email" class="form-control border-primary" required="">
+                           <div class="col-md-6 mt-3">
+                              <label>Company Email:</label>
+                              <input type="email" name="email" placeholder="Email" class="form-control border-primary" required="">
                            </div>
 
-                        <div class="col-md-4">
-                           <label>Phone Number :</label>
-                              <input type="text" placeholder="Phone Number " class="form-control border-primary" required="">
+                        <div class="col-md-4 mt-3">
+                           <label>Contact no:</label>
+                              <input type="text" name="contact" placeholder="Contact no" class="form-control border-primary" required="">
                         </div>
                  </div>
 
@@ -114,12 +91,12 @@
                 <div class="row">
                         <div class="col-md-5 mt-3">
                            <label>Street Address 1:</label>
-                           <input type="text" placeholder="Street Address 1" class="form-control border-primary" required="">
+                           <input type="text" name="stAdd01" placeholder="Street Address 1" class="form-control border-primary" required="">
                         </div>
 
                         <div class="col-md-5 mt-3">
                               <label>Street Address 2:</label>
-                              <input type="text" placeholder="Street Address 2" class="form-control border-primary" required="">
+                              <input type="text" name="stAdd02" placeholder="Street Address 2" class="form-control border-primary" required="">
                         </div>
                   </div>  
                
@@ -127,23 +104,24 @@
                 <div class="row"> 
                         <div class="col-md-4 mt-4">
                            <label>City:</label>
-                           <input type="text" placeholder="City" class="form-control border-primary" required="">
+                           <input type="text" name="city" placeholder="City" class="form-control border-primary" required="">
                         </div>
 
                         <div class="col-md-4 mt-4">
-                           <label>Province :</label>
-                           @include('include.province')
-                        </div>
+                              <label>State:</label>
+                              <input type="text" name="state" placeholder="State" class="form-control border-primary" required="">
+                           </div>
 
                         <div class="col-md-4 mt-4">
                            <label>Zip Code:</label>
-                           <input type="text" placeholder="Zip Code" class="form-control border-primary" required="">
+                           <input type="text" name="zipcode" placeholder="Zip Code" class="form-control border-primary" required="">
                         </div>    
                 </div>   
                 <hr class="mt-4">
 
                   <div class="row">
                      <div class="col-md-6">
+                        <label>Company Logo:</label>
                         <input type="file" name="picture" id="picture" class="form-control border-primary">
                      </div>
                   </div>
@@ -153,7 +131,7 @@
                 <div class="row">
                         <div class="col-md-4">
                            <label>User Name:</label>
-                           <input type="text" placeholder="User Name" class="form-control border-primary" required="">
+                           <input type="text" name="username" placeholder="User Name" class="form-control border-primary" required="">
                         </div> 
                </div> 
 
@@ -174,7 +152,7 @@
              
             <div class="row justify-content-Start ">
                <div class="col-12 col-md-4 mt-4">
-                 <button type="button" class="btn btn-warning">Create Account</button>
+                 <button type="submit" name="button" class="btn btn-warning">Create Account</button>
                </div> 
             </div> 
 

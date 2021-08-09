@@ -92,8 +92,8 @@
                            </div>
 
                         <div class="col-md-4">
-                           <label>Phone Number :</label>
-                              <input type="text" placeholder="Phone Number " class="form-control border-primary" required="">
+                           <label>Contact no:</label>
+                              <input type="text" placeholder="Contact no" class="form-control border-primary" required="">
                         </div>
                  </div>
 
@@ -131,6 +131,11 @@
                         </div>
 
                         <div class="col-md-4 mt-4">
+                              <label>State:</label>
+                              <input type="text" placeholder="State" class="form-control border-primary" required="">
+                           </div>
+
+                        <div class="col-md-4 mt-4">
                            <label>Zip Code:</label>
                            <input type="text" placeholder="Zip Code" class="form-control border-primary" required="">
                         </div>    
@@ -139,6 +144,7 @@
 
                   <div class="row">
                      <div class="col-md-6">
+                        <label>User Image:</label>
                         <input type="file" name="picture" id="picture" class="form-control border-primary">
                      </div>
                   </div>
