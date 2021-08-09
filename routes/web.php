@@ -65,6 +65,10 @@ Route::get('/CategoryAdd',function(){
     return view('CategoryAdd')->with('cat',$categoryType);
 });
 
+Route::get('/SignUpseller',function(){
+    return view('sellerSignUp');
+});
+
 
 
 Route::get('ItemInsert','subcatcontroller@getCountries');
