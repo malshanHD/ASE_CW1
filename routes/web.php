@@ -18,15 +18,16 @@ use Illuminate\Support\Facades\Route;
 });*/
 
 Route::get('/', function () {
-   $item=App\item::all();
+    //$item=App\item::all();
     //return view('home')->with('item',$item);
 
     $maincategory=App\maincategory::all();
 
-    $WomensFashion=App\item::where('categoryName',"Women's Fashion");
+    $WomensFashion=App\item::where('itemMainCat','100')->orderBy('id','DESC')->take(6)->get();
+    $MensFashion=App\item::where('itemMainCat','101')->orderBy('id','DESC')->take(6)->get();
     
 
-    return view('home', compact('item', 'maincategory','WomensFashion'));
+    return view('home', compact('MensFashion', 'maincategory','WomensFashion'));
     
 });
 

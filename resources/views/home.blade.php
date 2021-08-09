@@ -119,14 +119,14 @@
     </div>
 
     <div class="row">
-    @foreach($item as $data)
+    @foreach($MensFashion as $mensfa)
           <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
               <div class="card-body">
-                <img class="card-img-top" src="{{asset('AddItemsImages/'.$data->mainImage)}}" style="width:100%; height:100%;" alt="Card image cap"> 
-                   <p><b><a href="/BuyItem/{{$data->itemCode}}">{{$data->itemName}}</a></b></p>
+                <img class="card-img-top" src="{{asset('AddItemsImages/'.$mensfa->mainImage)}}" style="width:100%; height:100%;" alt="Card image cap"> 
+                   <p><b><a href="/BuyItem/{{$mensfa->itemCode}}">{{$mensfa->itemName}}</a></b></p>
                    <span>
-                      <p>${{$data->itemPrice}}</p>
+                      <p>${{$mensfa->itemPrice}}</p>
                    </span>         
               </div>
             </div>

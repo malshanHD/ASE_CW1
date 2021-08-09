@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\item;
 use App\ItemImage;
+use DB;
 
 class itemcontroller extends Controller
 {
@@ -70,6 +71,9 @@ class itemcontroller extends Controller
 
         $images=ItemImage::where('item_id',$itemRetrive)->get();
 
+        $sug = DB::Table('items')->select('itemSubCat')->where('itemCode',$itemRetrive)->get();  
+        
+        
         return view('buyitem', compact('images', 'datas'));
     }
 }
