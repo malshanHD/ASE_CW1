@@ -68,6 +68,9 @@ Route::get('/CategoryAdd',function(){
 Route::get('/SignUpseller',function(){
     return view('sellerSignUp');
 });
+Route::get('/Help',function(){
+    return view('help');
+});
 
 
 
