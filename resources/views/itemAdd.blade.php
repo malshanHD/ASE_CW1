@@ -20,6 +20,11 @@
             <h1 class="text-uppercase">Item Add</h1>
         </div>
     </div>
+    @foreach($errors->all() as $error)
+        <div class="alert alert-danger" role="alert">
+        {{$error}}
+        </div>
+    @endforeach
     @if(session()->has('message'))
         <div class="alert alert-success">
             {{ session()->get('message') }}

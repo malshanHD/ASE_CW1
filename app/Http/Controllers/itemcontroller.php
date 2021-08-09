@@ -14,6 +14,10 @@ class itemcontroller extends Controller
 
         $item = new item();
 
+        $this->validate($request,[
+            'name'=>'required|max:180|min:2',
+        ]);
+
         $imgName=time().'-'.$request->name.'.'.$request->mainPic->extension();
 
         $request->mainPic->move(public_path('AddItemsImages'),$imgName);
