@@ -55,6 +55,19 @@
       {{csrf_field()}}
            <h1>Welcome to Sams & Sams!</h1>
 
+           <!-- error message -->
+           @foreach($errors->all() as $error)
+            <div class="alert alert-danger" role="alert">
+            {{$error}}
+            </div>
+            @endforeach
+            
+            @if(session()->has('message'))
+               <div class="alert alert-success">
+               {{ session()->get('message') }}
+               </div>
+            @endif
+
                   <div class="row">
                      <div class="col-md-6 mt-5">
                         <label> Company name:</label>

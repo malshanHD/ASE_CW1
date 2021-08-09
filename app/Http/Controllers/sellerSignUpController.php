@@ -13,6 +13,16 @@ class sellerSignUpController extends Controller
 
         $this->validate($request,[
             'companyname'=>'required|max:180|min:2',
+            'email'=>'required|max:180|min:2',
+            'contact'=>'required|max:180|min:2',
+            'countries'=>'required',
+            'stAdd01'=>'required|max:180|min:2',
+            'stAdd02'=>'required|max:180|min:2',
+            'city'=>'required|max:180|min:2',
+            'state'=>'required|max:180|min:2',
+            'zipcode'=>'required|max:180|min:2',
+            'sellerImage'=>'required',
+
         ]);
 
 

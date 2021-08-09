@@ -51,18 +51,32 @@
 <div class="container mt-3"> 
     <div class="col-md-3"></div>
     <div class="col-md-12" id="form">
-      <form>
+      <form method="post" action="/buyerInfoSave" enctype="multipart/form-data">
+      {{csrf_field()}}
            <h1>Welcome to Sams & Sams!</h1>
+
+           <!-- error message -->
+            @foreach($errors->all() as $error)
+               <div class="alert alert-danger" role="alert">
+               {{$error}}
+               </div>
+            @endforeach
+            
+            @if(session()->has('message'))
+               <div class="alert alert-success">
+               {{ session()->get('message') }}
+               </div>
+            @endif
 
                   <div class="row">
                            <div class="col-md-4 mt-5">
                               <label>Frist Name:</label>
-                              <input type="text" placeholder="Frist Name" class="form-control border border-primary"  required="">
+                              <input type="text" name="fname" placeholder="Frist Name" class="form-control border border-primary"  required="">
                            </div>
 
                            <div class="col-md-4 mt-5">
                               <label>Last Name:</label>
-                              <input type="text" placeholder="Last Name" class="form-control border-primary" required="">
+                              <input type="text" name="Lname" placeholder="Last Name" class="form-control border-primary" required="">
                            </div>
                   </div>
                   
@@ -81,19 +95,19 @@
 
                         <div class="col-md-5 mt-4">
                            <label>Date of Birth:</label>
-                           <input type="date" placeholder="" class="form-control border-primary" required="">
+                           <input type="date" placeholder="" name="dob" class="form-control border-primary" required="">
                         </div>
                </div>   
                <hr class="mt-4">
                  <div class="row">
                            <div class="col-md-6">
                               <label>Email:</label>
-                              <input type="email" placeholder="Email" class="form-control border-primary" required="">
+                              <input type="email" name="email" placeholder="Email" class="form-control border-primary" required="">
                            </div>
 
                         <div class="col-md-4">
                            <label>Contact no:</label>
-                              <input type="text" placeholder="Contact no" class="form-control border-primary" required="">
+                              <input type="text" name="contact" placeholder="Contact no" class="form-control border-primary" required="">
                         </div>
                  </div>
 
@@ -114,12 +128,12 @@
                 <div class="row">
                         <div class="col-md-5 mt-3">
                            <label>Street Address 1:</label>
-                           <input type="text" placeholder="Street Address 1" class="form-control border-primary" required="">
+                           <input type="text" name="stAdd01" placeholder="Street Address 1" class="form-control border-primary" required="">
                         </div>
 
                         <div class="col-md-5 mt-3">
                               <label>Street Address 2:</label>
-                              <input type="text" placeholder="Street Address 2" class="form-control border-primary" required="">
+                              <input type="text" name="stAdd02" placeholder="Street Address 2" class="form-control border-primary" required="">
                         </div>
                   </div>  
                
@@ -127,17 +141,17 @@
                 <div class="row"> 
                         <div class="col-md-4 mt-4">
                            <label>City:</label>
-                           <input type="text" placeholder="City" class="form-control border-primary" required="">
+                           <input type="text" name="city" placeholder="City" class="form-control border-primary" required="">
                         </div>
 
                         <div class="col-md-4 mt-4">
                               <label>State:</label>
-                              <input type="text" placeholder="State" class="form-control border-primary" required="">
+                              <input type="text" name="state" placeholder="State" class="form-control border-primary" required="">
                            </div>
 
                         <div class="col-md-4 mt-4">
                            <label>Zip Code:</label>
-                           <input type="text" placeholder="Zip Code" class="form-control border-primary" required="">
+                           <input type="text" name="zipcode" placeholder="Zip Code" class="form-control border-primary" required="">
                         </div>    
                 </div>   
                 <hr class="mt-4">
@@ -175,7 +189,7 @@
              
             <div class="row justify-content-Start ">
                <div class="col-12 col-md-4 mt-4">
-                 <button type="button" class="btn btn-warning">Create Account</button>
+                 <button type="submit" class="btn btn-warning">Create Account</button>
                </div> 
             </div> 
 
