@@ -11,6 +11,10 @@ class maincatcontroller extends Controller
     {
         $category=new maincategory;
 
+        $this->validate($request,[
+            'categorytype'=>'required|max:180|min:2',
+        ]);
+
         $category->categoryName=$request->categorytype;
         $category->save();
         return redirect()->back()->with('message', 'Item Added Successfully!');

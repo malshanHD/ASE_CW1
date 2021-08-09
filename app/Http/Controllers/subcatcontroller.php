@@ -10,7 +10,13 @@ class subcatcontroller extends Controller
 {
     public function subsavedata(Request $request){
         $Subcategory=new subcategory;
-
+        
+        $this->validate($request,[
+            'maincategory'=>'required|max:180|min:2',
+            'subcategorytype'=>'required|max:180|min:2',
+        ]);
+      
+     
         $Subcategory->subcategoryName=$request->subcategorytype;
         $Subcategory->id=$request->maincategory;
         $Subcategory->save();
