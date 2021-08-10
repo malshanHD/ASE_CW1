@@ -143,17 +143,19 @@
           </div>
     </div>
     <div class="row">
-    <div class="col-12 col-md-3 mb-2">
+    @foreach($Jewelleryitems as $jewellitem)
+          <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
               <div class="card-body">
-                   <img src="AddItemsImages/j1.PNG" style="width: 100%;" height="auto" alt="">  
-                   <p><b>Item name</b></p> 
+                <img class="card-img-top" src="{{asset('AddItemsImages/'.$jewellitem->mainImage)}}" style="width:100%; height:100%;" alt="Card image cap"> 
+                   <p><b><a href="/BuyItem/{{$jewellitem->itemCode}}">{{$jewellitem->itemName}}</a></b></p>
                    <span>
-                     <p><s>$40</s> &nbsp &nbsp $38</p>
-                   </span>          
+                      <p>${{$jewellitem->itemPrice}}</p>
+                   </span>         
               </div>
             </div>
-          </div>  
+          </div> 
+      @endforeach 
     </div>
  </div>
 
@@ -165,17 +167,19 @@
           </div>
     </div>
     <div class="row">
-    <div class="col-12 col-md-3 mb-2">
+    @foreach($Babyitems as $babyitem)
+          <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
               <div class="card-body">
-                   <img src="AddItemsImages/bby1.PNG" style="width: 100%;" height="auto" alt="">   
-                   <p><b>Item name</b></p>
+                <img class="card-img-top" src="{{asset('AddItemsImages/'.$babyitem->mainImage)}}" style="width:100%; height:100%;" alt="Card image cap"> 
+                   <p><b><a href="/BuyItem/{{$babyitem->itemCode}}">{{$babyitem->itemName}}</a></b></p>
                    <span>
-                     <p><s>$30</s> &nbsp &nbsp 27</p>
-                   </span>          
+                      <p>${{$babyitem->itemPrice}}</p>
+                   </span>         
               </div>
             </div>
-          </div>  
+          </div> 
+      @endforeach 
     </div>
 </div>
 
@@ -187,17 +191,19 @@
           </div>
     </div>
     <div class="row">
-    <div class="col-12 col-md-3 mb-2">
+    @foreach($Furnitures as $furniture)
+          <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
               <div class="card-body">
-                   <img src="AddItemsImages/f1.JPG" style="width: 100%;" height="auto" alt="">  
-                   <p><b>Item name</b></p>
+                <img class="card-img-top" src="{{asset('AddItemsImages/'.$furniture->mainImage)}}" style="width:100%; height:100%;" alt="Card image cap"> 
+                   <p><b><a href="/BuyItem/{{$furniture->itemCode}}">{{$furniture->itemName}}</a></b></p>
                    <span>
-                     <p><s>$51</s> &nbsp &nbsp $45</p>
-                   </span>           
+                      <p>${{$furniture->itemPrice}}</p>
+                   </span>         
               </div>
             </div>
-          </div>  
+          </div> 
+      @endforeach 
     </div>
 </div>
 <div class="container mt-3" style="background: rgb(241,241,241);">
@@ -208,17 +214,19 @@
           </div>
     </div>
     <div class="row">
-    <div class="col-12 col-md-3 mb-2">
+    @foreach($Books as $books)
+          <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
               <div class="card-body">
-                   <img src="AddItemsImages/eleI1.JPG" style="width: 100%;" height="auto" alt="">   
-                   <p><b>Item name</b></p>
+                <img class="card-img-top" src="{{asset('AddItemsImages/'.$books->mainImage)}}" style="width:100%; height:100%;" alt="Card image cap"> 
+                   <p><b><a href="/BuyItem/{{$books->itemCode}}">{{$books->itemName}}</a></b></p>
                    <span>
-                     <p><s>$27</s> &nbsp &nbsp $22</p>
-                   </span>          
+                      <p>${{$books->itemPrice}}</p>
+                   </span>         
               </div>
             </div>
-          </div>  
+          </div> 
+      @endforeach 
     </div>
 </div>
 <div class="container mt-3" style="background: rgb(241,241,241);">
@@ -229,17 +237,19 @@
           </div>
     </div>
     <div class="row">
-    <div class="col-12 col-md-3 mb-2">
+    @foreach($Electronicitems as $elecitems)
+          <div class="col-12 col-md-3 mb-2">
             <div class="card" style="width: 100%;">
               <div class="card-body">
-                   <img src="AddItemsImages/b1.JPG" style="width: 100%;" height="auto" alt=""> 
-                   <p><b>Item name</b></p>
+                <img class="card-img-top" src="{{asset('AddItemsImages/'.$elecitems->mainImage)}}" style="width:100%; height:100%;" alt="Card image cap"> 
+                   <p><b><a href="/BuyItem/{{$elecitems->itemCode}}">{{$elecitems->itemName}}</a></b></p>
                    <span>
-                     <p><s>$35</s> &nbsp &nbsp $30</p>
-                   </span>            
+                      <p>${{$elecitems->itemPrice}}</p>
+                   </span>         
               </div>
             </div>
-          </div>  
+          </div> 
+      @endforeach 
     </div>
 </div>
 <div class="container mt-3" style="background: rgb(241,241,241);">

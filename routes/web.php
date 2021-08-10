@@ -25,9 +25,14 @@ Route::get('/', function () {
 
     $WomensFashion=App\item::where('itemMainCat','100')->orderBy('id','DESC')->take(6)->get();
     $MensFashion=App\item::where('itemMainCat','101')->orderBy('id','DESC')->take(6)->get();
+    $Jewelleryitems=App\item::where('itemMainCat','102')->orderBy('id','DESC')->take(6)->get();
+    $Babyitems=App\item::where('itemMainCat','103')->orderBy('id','DESC')->take(6)->get();
+    $Furnitures=App\item::where('itemMainCat','104')->orderBy('id','DESC')->take(6)->get();
+    $Books=App\item::where('itemMainCat','106')->orderBy('id','DESC')->take(6)->get();
+    $Electronicitems=App\item::where('itemMainCat','107')->orderBy('id','DESC')->take(6)->get();
     
 
-    return view('home', compact('MensFashion', 'maincategory','WomensFashion'));
+    return view('home', compact('MensFashion', 'maincategory','WomensFashion','Jewelleryitems','Babyitems','Furnitures','Books','Electronicitems'));
     
 });
 
