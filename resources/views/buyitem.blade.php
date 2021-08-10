@@ -82,11 +82,36 @@
             <!-- comment section -->
             <h5 class="mt-5">QnA Section</h5>
             <form action="/askQuize" method="post">
+            {{csrf_field()}}
+                <input type="text" name="email" id="">
+                <input type="hidden" name="itemcode" value="{{$data->itemCode}}">
                 <textarea name="quize" id="quize" class="form-control" rows="5"></textarea>
                 <input type="submit" value="Ask" class="btn btn-warning text-light mt-2">
             </form>
+            @endforeach
+            @foreach($cmnt as $cmnts)
+                <div class="card mt-3">
+                    <p class="card-header"><b>{{$cmnts->email}}</b></p>
+                    <div class="card-body">
+                        <p class="card-text">{{$cmnts->quize}}</p>
+                        <form action="/answer" method="post">
+                        {{csrf_field()}}
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-sm">Reply</span>
+                                </div>
+                                <input type="hidden" name="mainCmtID" value="{{$cmnts->id}}">
+                                <input type="hidden" name="email" value="user@123.com">
+                                <input type="text" name="cmntreply" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                            <input type="submit" value="Answer" class="btn btn-primary btn-sm text-light">
+                            
+                        </form>
+                    </div>
+                </div>
+            @endforeach
         </div>
-    @endforeach
+    
     
         <div class="col-2 ml-2" style="background: rgb(241,241,241);">
             <h5 class="mt-2">Latest Items</h5> <hr>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\item;
 use App\ItemImage;
+use App\comment;
+use App\cmntreply;
 use DB;
 
 class itemcontroller extends Controller
@@ -76,8 +78,11 @@ class itemcontroller extends Controller
        // $itemCatID=$sug;
        
         $item = item::orderBy('id', 'DESC')->take(4)->get();
-        
 
-        return view('buyitem', compact('images', 'datas','item'));
+        $cmnt=comment::where('itemCode',$itemRetrive)->get();
+
+       
+
+        return view('buyitem', compact('images', 'datas','item','cmnt'));
     }
 }
