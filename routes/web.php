@@ -98,4 +98,3 @@ Route::post('/subcategorySave','subcatcontroller@subsavedata');
 Route::post('/itemUpload','itemcontroller@saveItem');
 Route::post('/sellerInfoSave','sellerSignUpController@saveSellerInfo');
 Route::post('/buyerInfoSave','BuyerSignUpController@saveBuyerInfo');
-
