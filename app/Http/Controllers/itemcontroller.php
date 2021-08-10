@@ -17,7 +17,7 @@ class itemcontroller extends Controller
 
         $this->validate($request,[
             'name'=>'required|max:180|min:2',
-            'description'=>'required|max:180|min:2',
+            'description'=>'required|max:2000|min:2',
             'category'=>'required',
             'subcate'=>'required',
             'Warranty'=>'required',
@@ -71,9 +71,13 @@ class itemcontroller extends Controller
 
         $images=ItemImage::where('item_id',$itemRetrive)->get();
 
-        $sug = DB::Table('items')->select('itemSubCat')->where('itemCode',$itemRetrive)->get();  
+       // $sug = DB::Table('items')->select('itemSubCat')->where('itemCode',$itemRetrive)->get();  
+       
+       // $itemCatID=$sug;
+       
+        $item = item::orderBy('id', 'DESC')->take(4)->get();
         
-        
-        return view('buyitem', compact('images', 'datas'));
+
+        return view('buyitem', compact('images', 'datas','item'));
     }
 }

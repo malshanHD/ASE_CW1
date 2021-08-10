@@ -55,15 +55,52 @@
     <div class="row">
         <div class="col-6">
 
-        <div class="row">
+        <div class="row justify-content-center mt-2">
         
         @foreach($images as $img)
             <div class="col-3">
-                <img src="{{ url('storage/avatars/'.basename($img->image)) }}" class="img-fluid" alt="Avatar">
+                <img src="{{ url('storage/avatars/'.basename($img->image)) }}" class="img-fluid" style="width:100%; height:100%;" alt="Avatar">
             </div>
         @endforeach
         </div>
 
+        </div>
+    
+    </div>
+</div>
+<div class="container mt-4" >
+    <div class="row justify-content-center">
+    @foreach($datas as $data)
+        <div class="col-9" style="background: rgb(241,241,241);">
+            <h5 class="mt-2">Product Specification of the {{$data->itemName}}</h5>
+            <hr>
+            <p>{{$data->itemDescription}}</p>
+            <p><b>Warrenty</b> : {{$data->itemWarrenty}} month</p>
+            <p><b>Item code</b> : {{$data->itemCode}}</p>
+            <p><b>Saller</b> : NuN</p>
+            
+            <!-- comment section -->
+            <h5 class="mt-5">QnA Section</h5>
+            <form action="/askQuize" method="post">
+                <textarea name="quize" id="quize" class="form-control" rows="5"></textarea>
+                <input type="submit" value="Ask" class="btn btn-warning text-light mt-2">
+            </form>
+        </div>
+    @endforeach
+    
+        <div class="col-2 ml-2" style="background: rgb(241,241,241);">
+            <h5 class="mt-2">Latest Items</h5> <hr>
+            @foreach($item as $items)
+            <div class="card" style="width: 100%;">
+              <div class="card-body">
+                <img class="card-img-top" src="{{asset('AddItemsImages/'.$items->mainImage)}}" style="width:100%; height:100%;" alt="Card image cap"> 
+                   <p><b><a href="/BuyItem/{{$items->itemCode}}">{{$items->itemName}}</a></b></p>
+                   <span>
+                      <p>${{$items->itemPrice}}</p>
+                   </span>         
+              </div>
+            </div>
+            @endforeach
         </div>
     
     </div>

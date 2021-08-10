@@ -49,7 +49,9 @@
         <div class="col-12">
             <div class="form-group mt-2">
                 <label for="itemDes">Item Description</label> <span class="text-danger">*</span>
-                <input type="text" class="form-control border border-primary" id="itemDes"  placeholder="Item Description" name="description">
+                <!-- <input type="text" class="form-control border border-primary" id="itemDes"  placeholder="Item Description" name="description"> -->
+                <textarea name="description" id="description" class="form-control border border-primary" rows="6"></textarea>
+
             </div>
         </div>
         <div class="form-group col-md-6">
