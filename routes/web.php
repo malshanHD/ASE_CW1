@@ -74,6 +74,10 @@ Route::get('/CategoryAdd',function(){
     return view('CategoryAdd')->with('cat',$categoryType);
 });
 
+Route::get('/CategoryItem',function(){
+    return view('categoryitemsearch');
+});
+
 Route::get('/SignUpseller',function(){
     return view('sellerSignUp');
 });
