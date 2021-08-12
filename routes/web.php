@@ -85,6 +85,10 @@ Route::get('/Help',function(){
     return view('help');
 });
 
+Auth::routes(['verify' => true]);
+  
+Route::get('/home', 'HomeController@index')->name('home');
+
 
 
 Route::get('ItemInsert','subcatcontroller@getCountries');
